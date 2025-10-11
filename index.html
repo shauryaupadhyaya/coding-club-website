@@ -1,0 +1,74 @@
+<!--Can you do the following ONLY?
+You know the hover thing which I asked right.
+On hover it shows full and not it shows NOVA.
+Well rn it aint really working cause I want both of them to be in the same place like when hover NOVA is centered and not hover its full, that normally shows next to each other like
+NOVA Network of Virtual Aces when hovering.
+I want both to be in the center and switch when hover if possible.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>NOVA @OWISP</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Fredoka:wdth,wght@75..125,300..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+    body {
+        background-color: white;
+    }
+    #namebox{
+        display: inline-block;
+        background-color: #4ECDC4;
+        border-radius: 20px;
+        border: none;
+        width: 50px;
+        height: 40px;
+        padding: 0 10px;
+        text-align: center;
+        white-space: nowrap;
+        position: relative;
+        overflow: hidden;
+    }
+    #shortform{
+        opacity: 1;
+        transition: opacity 0.3s ease;
+    }
+    #fullform{
+        opacity: 0;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+    #namebox:hover{
+        width: 250px;
+        border-radius: 40px;
+    }
+    #namebox:hover #shortform{
+        opacity: 0;
+    }
+    #namebox:hover #fullform{
+        opacity: 1;
+        transform: scale(1);
+    }
+    #shortform, #fullform{
+        position: absolute;
+        font-family: 'Fredoka';
+        white-space: nowrap;
+    }
+</style>
+<body>
+    <div id="navigation">
+        <!-- to be added-->
+    </div>
+    <div id="clubimage">
+        <div id="namebox">
+            <span id="shortform">NOVA</span>
+            <span id="fullform">Network Of Virutal Aces</span>
+        </div>
+    </div>
+    <br>
+    <div id="about">
+        <p id="subheading">Who are we?</p>
+    </div>
+</body>
+</html>
