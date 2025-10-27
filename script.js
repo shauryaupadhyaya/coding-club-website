@@ -1,4 +1,3 @@
-// Navbar scroll effect
 const navbar = document.getElementById('navbar');
 
 window.addEventListener('scroll', () => {
@@ -9,7 +8,6 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Smooth scroll to section
 function scrollToSection(sectionId) {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -17,7 +15,6 @@ function scrollToSection(sectionId) {
     }
 }
 
-// Nav link click handlers
 const navLinks = document.querySelectorAll('.nav-link');
 navLinks.forEach(link => {
     link.addEventListener('click', (e) => {
@@ -27,13 +24,11 @@ navLinks.forEach(link => {
     });
 });
 
-// Set current year in footer
 const currentYearSpan = document.getElementById('currentYear');
 if (currentYearSpan) {
     currentYearSpan.textContent = new Date().getFullYear();
 }
 
-// Add animation on scroll for cards
 const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'
